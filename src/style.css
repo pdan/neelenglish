@@ -1,5 +1,15 @@
+/* Define variables */
+:root {
+  --mint-green-color: #CDFAD2;
+  --lavender-purple-color: #F5D5FF;
+  --blush-pink-color: #FFEAEE;
+  --ice-blue-color: #EAFCFF;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -28,18 +38,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -47,14 +70,21 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -62,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   --bg: #F9FBFB;
   --primary: #D7F1F1;
   --black: #171717;
-  
+
 
 }
 
@@ -84,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header .title .trend {
-  color: rgba(255,255,255, 0.6)
+  color: rgba(255, 255, 255, 0.6)
 }
 
 .header .personal-info {
@@ -115,15 +145,91 @@ h1, h2, h3, h4, h5, h6 {
 .header .info .content p:nth-child(2) {
   font-weight: 600;
 }
+
 .header .info .cup-icon {
   width: 200px;
 }
 
 .wrapper {
-  background-color: #F9FBFB;
+  /* background-color: #F9FBFB; */
+  /* border-radius: 30px;
+  padding: 30px; */
+  /* height: 100vh; */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+section#ielts {
+  /* background-color: var(--lavender-purple-color); */
+}
+
+section#ielts .title {
+  background-color: var(--mint-green-color);
+  border-radius: 30px 30px 0px 0px;
+  padding: 25px;
+  height: 70px;
+}
+
+section .content {
+  padding: 0px 30px 20px
+}
+
+section#ielts .content {
+  background-color: var(--mint-green-color);
+  display: none;
+}
+
+section#ielts.active .content {
+  display: flex;
+}
+
+section#junior {
+  background-color: var(--mint-green-color);
+}
+
+section#junior .title {
+  background-color: var(--lavender-purple-color);
+  border-radius: 30px 30px 0px 0px;
+  padding: 25px;
+  height: 70px;
+}
+
+section#junior .content {
+  background-color: var(--lavender-purple-color);
+  display: none;
+}
+
+section#junior.active .content {
+  display: flex;
+}
+
+section#general {
+  background-color: var(--lavender-purple-color);
+  border-radius: 0px 0px 30px 30px;
+}
+
+section#general .title {
+  background-color: #FFF;
   border-radius: 30px;
-  padding: 30px;
-  height: 100vh;
+  padding: 25px;
+  height: 70px;
+}
+
+section#general .content {
+  background-color: #FFF;
+  border-radius: 0px 0px 30px 30px;
+  display: none;
+}
+
+section#general.active .title {
+  border-radius: 30px 30px 0px 0px;
+}
+
+section#general.active .content {
+  display: flex;
 }
 
 .test {
