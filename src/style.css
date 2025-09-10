@@ -150,42 +150,58 @@ h6 {
   width: 200px;
 }
 
-.wrapper {
-  /* background-color: #F9FBFB; */
-  /* border-radius: 30px;
-  padding: 30px; */
-  /* height: 100vh; */
-}
-
 .section {
   display: flex;
   flex-direction: column;
 }
 
-section#ielts {
+section .title:hover {
+  cursor: pointer;
   /* background-color: var(--lavender-purple-color); */
 }
 
+/** IELTS SECTION **/
 section#ielts .title {
   background-color: var(--mint-green-color);
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
-  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section#ielts .title .details {
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.3;
+  text-shadow: 1px 1px 1px 2px #ffffff;
+}
+
+section#ielts.active .island {
+  background-color: white;
+  min-height: 100px;
+  border-radius: 20px;
+  padding: 30px;
 }
 
 section .content {
-  padding: 0px 30px 20px
+  padding: 0px 30px 20px;
+  display: none;
 }
 
 section#ielts .content {
   background-color: var(--mint-green-color);
-  display: none;
+  gap: 10px;
 }
 
 section#ielts.active .content {
   display: flex;
+  flex-direction: column;
 }
 
+
+/** JUNIORS SECTION **/
 section#junior {
   background-color: var(--mint-green-color);
 }
@@ -199,13 +215,22 @@ section#junior .title {
 
 section#junior .content {
   background-color: var(--lavender-purple-color);
-  display: none;
+  gap: 10px;
 }
 
 section#junior.active .content {
   display: flex;
+  flex-direction: column;
 }
 
+section#junior.active .island {
+  background-color: white;
+  min-height: 100px;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/** GENERAL SECTION **/
 section#general {
   background-color: var(--lavender-purple-color);
   border-radius: 0px 0px 30px 30px;
@@ -221,7 +246,31 @@ section#general .title {
 section#general .content {
   background-color: #FFF;
   border-radius: 0px 0px 30px 30px;
-  display: none;
+  gap: 10px;
+}
+
+section#general .content> :nth-child(1) {
+  background-color: #FFEAEE;
+}
+
+section#general .content> :nth-child(2) {
+  background-color: #EAFCFF;
+}
+
+section#general .content> :nth-child(3) {
+  background-color: #EAFCFF;
+}
+
+section#general .content> :nth-child(4) {
+  background-color: #FFEAEE;
+}
+
+section#general .content> :nth-child(5) {
+  background-color: #EAFCFF;
+}
+
+section#general .content> :nth-child(6) {
+  background-color: #FFEAEE;
 }
 
 section#general.active .title {
@@ -230,10 +279,164 @@ section#general.active .title {
 
 section#general.active .content {
   display: flex;
+  flex-direction: column;
 }
 
-.test {
-  background-color: var(--primary);
-  width: 200px;
-  height: 200px;
+section#general.active .island {
+  /* background-color: white; */
+  min-height: 100px;
+  border-radius: 20px;
+  padding: 30px;
+  /* grid-row: auto; */
 }
+
+
+
+/* section#ielts.active .island:nth-child(1) {
+
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  /** IELTS SECTION **/
+  section#ielts .title {
+    flex-direction: row;
+    height: 70px;
+  }
+
+  section#ielts .content {
+    gap: 20px;
+  }
+
+  section#ielts.active .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 200px);
+  }
+
+  section#ielts.active .content> :nth-child(1) {
+    grid-column: span 4;
+    grid-row: 1 / 3;
+  }
+
+  section#ielts.active .content> :nth-child(2) {
+    grid-column: span 4;
+    grid-row: 1 / 1;
+  }
+
+  section#ielts.active .content> :nth-child(3) {
+    grid-column: span 4;
+    grid-row: 1 / 3;
+  }
+
+  section#ielts.active .content> :nth-child(4) {
+    grid-column: span 4;
+    grid-row: 2 / 3;
+  }
+
+  section#ielts.active .content> :nth-child(5) {
+    grid-column: span 7;
+    grid-row: 3 / 3;
+  }
+
+  section#ielts.active .content> :nth-child(6) {
+    grid-column: span 5;
+    grid-row: 3 / 3;
+  }
+
+  /** JUNIORS SECTION **/
+  section#junior .title {
+    flex-direction: row;
+    height: 70px;
+  }
+
+  section#junior .content {
+    gap: 20px;
+  }
+
+  section#junior.active .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 150px);
+  }
+
+  section#junior.active .content> :nth-child(1) {
+    grid-column: span 6;
+    grid-row: 1 / 4;
+  }
+
+  section#junior.active .content> :nth-child(2) {
+    grid-column: span 6;
+    grid-row: 1 / 3;
+  }
+
+  section#junior.active .content> :nth-child(3) {
+    grid-column: span 2;
+    grid-row: 3 / 3;
+  }
+
+  section#junior.active .content> :nth-child(4) {
+    grid-column: span 4;
+    grid-row: 3 / 3;
+  }
+
+
+  /** GENERAL SECTION **/
+  section#general .title {
+    flex-direction: row;
+    height: 70px;
+  }
+
+  section#general .content {
+    gap: 20px;
+  }
+
+  section#general.active .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 200px);
+  }
+
+  section#general.active .content> :nth-child(1) {
+    grid-column: span 6;
+    grid-row: 1 / 2;
+  }
+
+  section#general.active .content> :nth-child(2) {
+    grid-column: span 6;
+    grid-row: 1 / 2;
+  }
+
+  section#general.active .content> :nth-child(3) {
+    grid-column: span 3;
+    grid-row: 2 / 2;
+  }
+
+  section#general.active .content> :nth-child(4) {
+    grid-column: span 3;
+    grid-row: 2 / 2;
+  }
+
+  section#general.active .content> :nth-child(5) {
+    grid-column: span 3;
+    grid-row: 2 / 2;
+  }
+
+  section#general.active .content> :nth-child(6) {
+    grid-column: span 3;
+    grid-row: 2 / 2;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
