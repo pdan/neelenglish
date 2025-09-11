@@ -105,16 +105,24 @@ h6 {
   padding: 0px 50px;
   color: white;
   width: 100%;
+  font-size: 0.8em;
 }
 
 .header .title {
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-direction: column;
+  gap: 0px;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
 .header .title .trend {
   color: rgba(255, 255, 255, 0.6)
+}
+
+.header .title .avatar {
+  width: 50px;
+  aspect-ratio: auto 3/4;
 }
 
 .header .personal-info {
@@ -129,8 +137,10 @@ h6 {
 
 .header .info {
   display: flex;
-  flex-direction: row;
-  width: 480px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
 }
 
 .header .info .content {
@@ -147,7 +157,13 @@ h6 {
 }
 
 .header .info .cup-icon {
-  width: 200px;
+  display: flex;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  max-height: 50px;
+}
+.header .info .content p:nth-child(2) {
+  margin-top: -10px;
 }
 
 .section {
@@ -160,22 +176,26 @@ section .title:hover {
   /* background-color: var(--lavender-purple-color); */
 }
 
+section .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+}
+
+section .title .details {
+  font-size: 1em;
+  font-weight: 500;
+  /* text-transform: uppercase; */
+  opacity: 0.3;
+  text-shadow: 1px 1px 1px 2px #ffffff;
+}
+
 /** IELTS SECTION **/
 section#ielts .title {
   background-color: var(--mint-green-color);
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-section#ielts .title .details {
-  font-size: 1em;
-  font-weight: 500;
-  text-transform: uppercase;
-  opacity: 0.3;
-  text-shadow: 1px 1px 1px 2px #ffffff;
 }
 
 section#ielts.active .island {
@@ -210,7 +230,6 @@ section#junior .title {
   background-color: var(--lavender-purple-color);
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
-  height: 70px;
 }
 
 section#junior .content {
@@ -240,7 +259,6 @@ section#general .title {
   background-color: #FFF;
   border-radius: 30px;
   padding: 25px;
-  height: 70px;
 }
 
 section#general .content {
@@ -297,19 +315,48 @@ section#general.active .island {
 } */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+  .header {
+    font-size: 1em;
+  }
+  .header .title {
+    flex-direction: row;
+    gap: 20px
+  }
+  .header .title .avatar {
+    width: auto;
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .header .info {
+    flex-direction: row;
+    text-align: right;
+    width: 500px;
+  }
+
+  .header .info .cup-icon {
+    height: 80px;
+    /* aspect-ratio: 1 / 1; */
+  max-height:fit-content;
+  }
+
+  .header .info .content p {
+    margin-top: auto;
+  }
+
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-  /** IELTS SECTION **/
-  section#ielts .title {
+  section .title {
     flex-direction: row;
     height: 70px;
   }
+
+  /** IELTS SECTION **/
 
   section#ielts .content {
     gap: 20px;
@@ -352,10 +399,6 @@ section#general.active .island {
   }
 
   /** JUNIORS SECTION **/
-  section#junior .title {
-    flex-direction: row;
-    height: 70px;
-  }
 
   section#junior .content {
     gap: 20px;
@@ -389,10 +432,6 @@ section#general.active .island {
 
 
   /** GENERAL SECTION **/
-  section#general .title {
-    flex-direction: row;
-    height: 70px;
-  }
 
   section#general .content {
     gap: 20px;

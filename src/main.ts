@@ -1,1 +1,14 @@
-import './style.css'
+import "./style.css";
+
+let sections = document.getElementsByClassName("section");
+for (let section of sections) {
+    const title = section.getElementsByClassName("title");
+    title.item(0)?.addEventListener("click", () => {
+        hideAllSection(sections);
+        section.classList.add("active");
+    });
+}
+
+const hideAllSection = (sections: HTMLCollectionOf<Element>) => {
+    for (let section of sections) section.classList.remove("active");
+};
