@@ -162,6 +162,7 @@ h6 {
   aspect-ratio: 1 / 1;
   max-height: 50px;
 }
+
 .header .info .content p:nth-child(2) {
   margin-top: -10px;
 }
@@ -213,6 +214,41 @@ section .content {
 section#ielts .content {
   background-color: var(--mint-green-color);
   gap: 10px;
+}
+
+section#ielts .content .ielts-is-not-just-a-test {
+  background: #fff url("images/ielts-is-not-just-a-test.png") no-repeat;
+  background-size: 100% auto;
+  background-position: 0px 100%;
+  min-height: 400px;
+  font-size: 1.6em;
+  font-weight: 900;
+  text-align: center;
+  text-shadow:
+    2px 5px 0px #fff,
+    -2px 5px 0px #fff,
+    0px 5px 0px #fff;
+  /* outline: 5px #fff; */
+  /* -webkit-text-stroke: #FFF 3px ; */
+}
+
+section#ielts .content .mistakes {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  background:
+    linear-gradient(to bottom, transparent 20%, #fff 70%),
+    url("images/spiderman.png"),
+    #fff;
+
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position:  100% 0px;
+  justify-content: end;
+}
+
+section#ielts.active .suit h3 {
+  text-wrap: auto;
 }
 
 section#ielts.active .content {
@@ -319,10 +355,12 @@ section#general.active .island {
   .header {
     font-size: 1em;
   }
+
   .header .title {
     flex-direction: row;
     gap: 20px
   }
+
   .header .title .avatar {
     width: auto;
   }
@@ -339,7 +377,7 @@ section#general.active .island {
   .header .info .cup-icon {
     height: 80px;
     /* aspect-ratio: 1 / 1; */
-  max-height:fit-content;
+    max-height: fit-content;
   }
 
   .header .info .content p {
@@ -376,6 +414,32 @@ section#general.active .island {
   section#ielts.active .content> :nth-child(2) {
     grid-column: span 4;
     grid-row: 1 / 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  section#ielts.active .text-content {
+    text-overflow: ellipsis;
+  }
+
+  section#ielts.active .hungry-ring {
+    width: 50%;
+  }
+
+  section#ielts.active .suit {
+    display: flex;
+    flex-direction: row;
+  }
+
+  section#ielts.active .suit img {
+    width: 50%;
+  }
+
+  section#ielts.active .suit h3 {
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
   }
 
   section#ielts.active .content> :nth-child(3) {
@@ -386,6 +450,26 @@ section#general.active .island {
   section#ielts.active .content> :nth-child(4) {
     grid-column: span 4;
     grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section#ielts.active .pipe-periscope {
+    display: flex;
+    justify-content: center;
+    margin-top: -55px;
+  }
+  section#ielts.active .pipe-periscope img {
+    height: 100%;
+    width: 140px;
+    /* max-width: max-content; */
+  }
+
+  section#ielts.active .content> :nth-child(4) .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 
   section#ielts.active .content> :nth-child(5) {
@@ -393,9 +477,37 @@ section#general.active .island {
     grid-row: 3 / 3;
   }
 
+  section#ielts.active .content .island.skills {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+  }
+
+  section#ielts.active .content .island.skills img {
+    height: 100%;
+  }
+
+  section#ielts.active .content .island.skills .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   section#ielts.active .content> :nth-child(6) {
     grid-column: span 5;
     grid-row: 3 / 3;
+  }
+
+  section#ielts .content .mistakes {
+    min-height: auto;
+    background:
+      linear-gradient(to right, transparent 10%, #fff 40%),
+      url("images/spiderman.png"),
+      #fff;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 0px 100%;
   }
 
   /** JUNIORS SECTION **/
