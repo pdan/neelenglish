@@ -243,7 +243,7 @@ section#ielts .content .mistakes {
 
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position:  100% 0px;
+  background-position: 100% 0px;
   justify-content: end;
 }
 
@@ -459,6 +459,7 @@ section#general.active .island {
     justify-content: center;
     margin-top: -55px;
   }
+
   section#ielts.active .pipe-periscope img {
     height: 100%;
     width: 140px;
@@ -480,11 +481,16 @@ section#general.active .island {
   section#ielts.active .content .island.skills {
     display: flex;
     flex-direction: row;
-    gap: 20px
+    gap: 20px;
+  }
+
+  section#ielts.active .content .island.skills .people {
+    max-width: 20%;
   }
 
   section#ielts.active .content .island.skills img {
-    height: 100%;
+    height: auto;
+    max-height: 100%;
   }
 
   section#ielts.active .content .island.skills .text-content {
