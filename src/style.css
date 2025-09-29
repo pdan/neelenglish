@@ -574,6 +574,17 @@ section#general.active .island {
     grid-row: 3 / 5;
   }
 
+  section#junior .content>.island:nth-child(4) {
+    display: grid;
+    justify-items: center;
+  }
+
+  section#junior .content .teacher-icon {
+    max-height: 150px;
+    align-self: flex-start;
+    aspect-ratio: 1 / 1;
+  }
+
   section#junior .content .interactive-learning {
     min-height: auto;
     background:
@@ -596,7 +607,7 @@ section#general.active .island {
   section#general.active .content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: 250px 500px;
   }
 
   section#general.active .content> :nth-child(1) {
@@ -627,11 +638,6 @@ section#general.active .island {
   section#general.active .content> :nth-child(6) {
     grid-column: span 3;
     grid-row: 2 / 2;
-  }
-  section#junior .content .teacher-icon {
-    max-height: 150px;
-    align-self: flex-start;
-    aspect-ratio: 1 / 1;
   }
 }
 
@@ -668,6 +674,13 @@ section#general.active .island {
   section#junior.active .content> :nth-child(4) {
     grid-column: span 4;
     grid-row: 6 / 10;
+  }
+
+  /** GENERAL SECTION **/
+  section#general.active .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 250px 350px;
   }
 }
 
