@@ -102,7 +102,7 @@ h6 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 50px;
+  padding: 0px 10px;
   color: white;
   width: 100%;
   font-size: 0.8em;
@@ -379,9 +379,6 @@ section#general.active .island {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .header {
-    font-size: 1em;
-  }
 
   .header .title {
     flex-direction: row;
@@ -395,6 +392,11 @@ section#general.active .island {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .header {
+    font-size: 1em;
+    padding: 0px 50px;
+  }
+  
   .header .info {
     flex-direction: row;
     text-align: right;
