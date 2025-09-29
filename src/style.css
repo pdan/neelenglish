@@ -285,6 +285,33 @@ section#junior.active .island {
   padding: 30px;
 }
 
+section#junior.active .content> :nth-child(1) {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  background:
+    url("images/image-1584792323921-5b1a9f1b60ac.jpeg"),
+    #fff;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 0px;
+  justify-content: end;
+}
+
+section#junior.active .content> :nth-child(1) .text-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.54);
+}
+
+section#junior.active .content> :nth-child(4) {
+  display: flex;
+  flex-direction: column;
+}
+
 /** GENERAL SECTION **/
 section#general {
   background-color: var(--lavender-purple-color);
@@ -383,7 +410,6 @@ section#general.active .island {
   .header .info .content p {
     margin-top: auto;
   }
-
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -525,12 +551,12 @@ section#general.active .island {
   section#junior.active .content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 150px);
+    grid-template-rows: repeat(4, 200px);
   }
 
   section#junior.active .content> :nth-child(1) {
     grid-column: span 6;
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
   }
 
   section#junior.active .content> :nth-child(2) {
@@ -540,14 +566,26 @@ section#general.active .island {
 
   section#junior.active .content> :nth-child(3) {
     grid-column: span 2;
-    grid-row: 3 / 3;
+    grid-row: 3 / 5;
   }
 
   section#junior.active .content> :nth-child(4) {
     grid-column: span 4;
-    grid-row: 3 / 3;
+    grid-row: 3 / 5;
   }
 
+  section#junior .content .interactive-learning {
+    min-height: auto;
+    background:
+      linear-gradient(to left, transparent 10%, #fff 50%),
+      url("images/interactive-learning.jpg"),
+      #fff;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 100% 100%;
+    padding-right: 40%;
+  }
 
   /** GENERAL SECTION **/
 
@@ -590,10 +628,48 @@ section#general.active .island {
     grid-column: span 3;
     grid-row: 2 / 2;
   }
+  section#junior .content .teacher-icon {
+    max-height: 150px;
+    align-self: flex-start;
+    aspect-ratio: 1 / 1;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+
+  /** JUNIORS SECTION **/
+
+  section#junior .content {
+    gap: 20px;
+  }
+
+  section#junior.active .content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(9, 66px);
+  }
+
+  section#junior.active .content> :nth-child(1) {
+    grid-column: span 6;
+    grid-row: 1 / 10;
+  }
+
+  section#junior.active .content> :nth-child(2) {
+    grid-column: span 6;
+    grid-row: 1 / 6;
+  }
+
+  section#junior.active .content> :nth-child(3) {
+    grid-column: span 2;
+    grid-row: 6 / 10;
+  }
+
+  section#junior.active .content> :nth-child(4) {
+    grid-column: span 4;
+    grid-row: 6 / 10;
+  }
+}
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {}
