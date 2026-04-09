@@ -217,7 +217,7 @@ section#ielts .content {
 }
 
 section#ielts .content .ielts-is-not-just-a-test {
-  background: #fff url("images/ielts-is-not-just-a-test.png") no-repeat;
+  background: #fff url("/images/ielts-is-not-just-a-test.png") no-repeat;
   background-size: 100% auto;
   background-position: 0px 100%;
   min-height: 400px;
@@ -238,7 +238,7 @@ section#ielts .content .mistakes {
   flex-direction: column;
   background:
     linear-gradient(to bottom, transparent 20%, #fff 70%),
-    url("images/spiderman.png"),
+    url("/images/spiderman.png"),
     #fff;
 
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ section#junior.active .content> :nth-child(1) {
   min-height: 300px;
   flex-direction: column;
   background:
-    url("images/image-1584792323921-5b1a9f1b60ac.jpeg"),
+    url("/images/image-1584792323921-5b1a9f1b60ac.jpeg"),
     #fff;
 
   background-repeat: no-repeat;
@@ -536,7 +536,7 @@ section#general.active .island {
     min-height: auto;
     background:
       linear-gradient(to right, transparent 10%, #fff 40%),
-      url("images/spiderman.png"),
+      url("/images/spiderman.png"),
       #fff;
     justify-content: center;
     background-repeat: no-repeat;
@@ -591,7 +591,7 @@ section#general.active .island {
     min-height: auto;
     background:
       linear-gradient(to left, transparent 10%, #fff 50%),
-      url("images/interactive-learning.jpg"),
+      url("/images/interactive-learning.jpg"),
       #fff;
     justify-content: center;
     background-repeat: no-repeat;
