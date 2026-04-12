@@ -152,7 +152,7 @@ h6 {
   /* justify-content: space-between; */
 }
 
-.header .info .content p:nth-child(2) {
+.header .info .content p:nth-child(1) {
   font-weight: 600;
 }
 
@@ -164,7 +164,37 @@ h6 {
 }
 
 .header .info .content p:nth-child(2) {
-  margin-top: -10px;
+  margin-top: -8px;
+}
+.header .info .content p:nth-child(3) {
+  margin-top: -8px;
+}
+
+.header .contact {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.header .contact .contact-item {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  gap: 10px;
+  align-items: center;
+}
+.header .contact .contact-item a {
+  color: white;
+  unicode-bidi: plaintext;
+  direction: rtl;
+  font-feature-settings: "ss01";
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.header .contact .contact-item:active,
+.header .contact .contact-item:visited {
+  color: white;
 }
 
 .section {
@@ -193,10 +223,15 @@ section .title .details {
 }
 
 /** IELTS SECTION **/
+section#ielts {
+  background-color: #fff;
+}
+
 section#ielts .title {
   background-color: var(--mint-green-color);
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
+  align-items: center;
 }
 
 section#ielts.active .island {
@@ -260,17 +295,23 @@ section#ielts.active .content {
 /** JUNIORS SECTION **/
 section#junior {
   background-color: var(--mint-green-color);
+  border-radius: 0px 0px 30px 30px;
 }
 
 section#junior .title {
   background-color: var(--lavender-purple-color);
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 30px;
   padding: 25px;
+  align-items: center;
 }
 
 section#junior .content {
   background-color: var(--lavender-purple-color);
   gap: 10px;
+}
+
+section#junior.active .title {
+  border-radius: 30px 30px 0px 0px;
 }
 
 section#junior.active .content {
@@ -314,19 +355,20 @@ section#junior.active .content> :nth-child(4) {
 
 /** GENERAL SECTION **/
 section#general {
-  background-color: var(--lavender-purple-color);
+  /* background-color: var(--lavender-purple-color); */
   border-radius: 0px 0px 30px 30px;
 }
 
 section#general .title {
   background-color: #FFF;
-  border-radius: 30px;
+  border-radius: 30px 30px 0px 0px;
   padding: 25px;
+  align-items: center;
 }
 
 section#general .content {
   background-color: #FFF;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0px;
   gap: 10px;
 }
 
