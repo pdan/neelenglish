@@ -25,6 +25,11 @@
   }
 }
 
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/Vazirmatn[wght].woff2');
+}
+
 body {
   /* 4. Add accessible line-height */
   line-height: 1.5;
@@ -35,6 +40,7 @@ body {
   font-family: "Vazirmatn";
   background: black;
   padding: 5px;
+  gap: 20px;
 }
 
 /* 6. Improve media defaults */
@@ -97,15 +103,16 @@ h6 {
 }
 
 .header {
-  height: 150px;
+  min-height: 150px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;
   color: white;
   width: 100%;
   font-size: 0.8em;
+  gap: 20px;
 }
 
 .header .title {
@@ -114,6 +121,7 @@ h6 {
   gap: 0px;
   flex-shrink: 0;
   cursor: pointer;
+  align-items: center;
 }
 
 .header .title .trend {
@@ -121,7 +129,7 @@ h6 {
 }
 
 .header .title .avatar {
-  width: 50px;
+  max-width: 120px;
   aspect-ratio: auto 3/4;
 }
 
@@ -129,6 +137,8 @@ h6 {
   font-size: 0.7em;
   flex-direction: column;
   align-self: center;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .header .personal-info h3 {
@@ -140,7 +150,6 @@ h6 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 300px;
 }
 
 .header .info .content {
@@ -166,6 +175,7 @@ h6 {
 .header .info .content p:nth-child(2) {
   margin-top: -8px;
 }
+
 .header .info .content p:nth-child(3) {
   margin-top: -8px;
 }
@@ -182,19 +192,24 @@ h6 {
   color: white;
   gap: 10px;
   align-items: center;
+  font-size: 16px;
 }
-.header .contact .contact-item a {
+
+.header .contact .contact-item.tel a {
   color: white;
   unicode-bidi: plaintext;
   direction: rtl;
   font-feature-settings: "ss01";
-  font-size: 18px;
   text-decoration: none;
 }
 
 .header .contact .contact-item:active,
 .header .contact .contact-item:visited {
   color: white;
+}
+
+.headline {
+  font-size: 1.3em;
 }
 
 .section {
@@ -231,7 +246,6 @@ section#ielts .title {
   background-color: var(--mint-green-color);
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
-  align-items: center;
 }
 
 section#ielts.active .island {
@@ -242,7 +256,7 @@ section#ielts.active .island {
 }
 
 section .content {
-  padding: 0px 30px 20px;
+  padding: 0px 10px 20px;
   display: none;
 }
 
@@ -302,7 +316,6 @@ section#junior .title {
   background-color: var(--lavender-purple-color);
   border-radius: 30px;
   padding: 25px;
-  align-items: center;
 }
 
 section#junior .content {
@@ -363,7 +376,6 @@ section#general .title {
   background-color: #FFF;
   border-radius: 30px 30px 0px 0px;
   padding: 25px;
-  align-items: center;
 }
 
 section#general .content {
@@ -420,25 +432,16 @@ section#general.active .island {
 } */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-
-  .header .title {
-    flex-direction: row;
-    gap: 20px
-  }
-
-  .header .title .avatar {
-    width: auto;
-  }
-}
+@media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .header {
     font-size: 1em;
-    padding: 0px 50px;
+    padding: 0px 10px;
+    flex-direction: row;
   }
-  
+
   .header .info {
     flex-direction: row;
     text-align: right;
@@ -454,14 +457,39 @@ section#general.active .island {
   .header .info .content p {
     margin-top: auto;
   }
+
+  .headline {
+    font-size: 1.3em;
+  }
+
+  section .content {
+    padding: 0px 30px 20px;
+    display: none;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .header .title {
+    flex-direction: row;
+    gap: 20px
+  }
+
+  .header {
+    flex-direction: row;
+  }
+
+  .header .personal-info {
+    text-align: justify;
+  }
 
   section .title {
     flex-direction: row;
     height: 70px;
+  }
+
+  .header .contact .contact-item {
+    font-size: 18px;
   }
 
   /** IELTS SECTION **/
